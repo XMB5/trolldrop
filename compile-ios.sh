@@ -6,4 +6,5 @@ if [ -z "$CSID" ]; then
 fi
 
 swiftc -target arm64-apple-ios11.4 -v -sdk $(xcrun --show-sdk-path --sdk iphoneos) *.swift -o trolldrop-ios
+install_name_tool -add_rpath /usr/lib/libswift trolldrop-ios
 codesign -s "$CSID" -fv --entitlements ent.xml trolldrop-ios
