@@ -14,7 +14,9 @@ let recharge = CommandLine.arguments.count >= 3 ? (Double(CommandLine.arguments[
 
 print("started trolldrop with url \(url) and recharge \(recharge)")
 
-let trollController = TrollController(sharedURL: url, rechargeDuration: recharge)
+let trollController = TrollController(sharedURL: url, rechargeDuration: recharge, logger: {message in
+    print(message)
+})
 trollController.start()
 
 dispatchMain()
