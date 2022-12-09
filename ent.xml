@@ -3,6 +3,10 @@
 <dict>
     <key>platform-application</key>
     <true/>
+    <key>com.apple.private.airdrop.discovery</key>
+    <true/>
+    <key>com.apple.private.airdrop.setting</key>
+    <true/>
 </dict>
 </plist>
 
